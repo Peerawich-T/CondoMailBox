@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #9B8DF3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="condoProject.controller.AddNewItemController">
+   <children>
+      <ImageView fitHeight="768.0" fitWidth="1032.0" layoutX="-6.0" pickOnBounds="true">
+         <image>
+            <Image url="@addIbg.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.63" surfaceScale="10.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="360.0" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <Label layoutX="81.0" layoutY="120.0" prefHeight="66.0" prefWidth="413.0" text="Receiver's  infomation : ">
+         <font>
+            <Font name="Calibri" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="410.0" prefHeight="66.0" prefWidth="223.0" text="Sender Info.">
+         <font>
+            <Font name="Calibri" size="34.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="mailImageView" fitHeight="170.0" fitWidth="170.0" layoutX="795.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon-512x512.png" />
+         </image></ImageView>
+      <ImageView fx:id="returnImageView" fitHeight="145.0" fitWidth="150.0" layoutX="831.0" layoutY="610.0" onMouseClicked="#handleReturnImageOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@return.png" />
+         </image>
+         <effect>
+            <DropShadow color="#edff00" spread="0.66" />
+         </effect>
+      </ImageView>
+      <Label layoutX="346.0" layoutY="20.0" text="New Item">
+         <font>
+            <Font name="Calibri" size="78.0" />
+         </font>
+      </Label>
+      <Button fx:id="addBtn" layoutX="855.0" layoutY="510.0" mnemonicParsing="false" onAction="#handleAddBtnOnAction" prefHeight="80.0" prefWidth="121.0" style="-fx-background-color: f9c523;" text="Add">
+         <font>
+            <Font name="Calibri Italic" size="34.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.37" surfaceScale="10.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="207.44" />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="browseImage" layoutX="795.0" layoutY="307.0" mnemonicParsing="false" onAction="#handleBrowseImageBtnOnAction" prefHeight="47.0" prefWidth="121.0" style="-fx-background-color: f9c523;" text="Browse">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.39" surfaceScale="6.62">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="207.44" />
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <TextField fx:id="senderInfo" layoutX="302.0" layoutY="426.0" />
+      <Label layoutX="515.0" layoutY="409.0" prefHeight="66.0" prefWidth="176.0" text="Mail type   ">
+         <font>
+            <Font name="Calibri" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="importantLevelLabel" layoutX="104.0" layoutY="477.0" prefHeight="66.0" prefWidth="242.0" text="Important level">
+         <font>
+            <Font name="Calibri" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="serviceNameLabel" layoutX="104.0" layoutY="537.0" prefHeight="66.0" prefWidth="242.0" text="Service's name">
+         <font>
+            <Font name="Calibri" size="34.0" />
+         </font>
+      </Label>
+      <TextField fx:id="importantLevel" layoutX="377.0" layoutY="491.0" prefHeight="39.0" prefWidth="223.0" />
+      <TextField fx:id="serviceName" layoutX="377.0" layoutY="551.0" prefHeight="39.0" prefWidth="223.0" />
+      <Label fx:id="trackingNumberLabel" layoutX="97.0" layoutY="604.0" prefHeight="51.0" prefWidth="256.0" text="Tracking number">
+         <font>
+            <Font name="Calibri Italic" size="34.0" />
+         </font>
+      </Label>
+      <TextField fx:id="trackingNumber" layoutX="377.0" layoutY="610.0" prefHeight="39.0" prefWidth="223.0" />
+      <ComboBox fx:id="mailType" layoutX="673.0" layoutY="422.0" prefHeight="39.0" prefWidth="207.0" promptText="Type" />
+      <Label layoutX="102.0" layoutY="664.0" prefHeight="66.0" prefWidth="81.0" text="Size">
+         <font>
+            <Font name="Calibri Italic" size="34.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="size" layoutX="206.0" layoutY="682.0" prefWidth="150.0" />
+      <Label layoutX="119.0" layoutY="230.0" prefHeight="66.0" prefWidth="129.0" text="building :">
+         <font>
+            <Font name="Calibri Italic" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="386.0" layoutY="232.0" prefHeight="66.0" prefWidth="129.0" text="floor :">
+         <font>
+            <Font name="Calibri" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="285.0" prefHeight="66.0" prefWidth="207.0" text="Room number :">
+         <font>
+            <Font name="Calibri Italic" size="29.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="buildingComboBox" layoutX="261.0" layoutY="244.0" prefHeight="39.0" prefWidth="81.0" />
+      <ComboBox fx:id="floorComboBox" layoutX="477.0" layoutY="246.0" prefHeight="39.0" prefWidth="145.0" />
+      <ComboBox fx:id="roomNumberComboBox" layoutX="333.0" layoutY="299.0" prefHeight="39.0" prefWidth="290.0" />
+      <Label fx:id="status" layoutX="436.0" layoutY="672.0" prefHeight="51.0" prefWidth="374.0" textFill="RED">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="receiverName" layoutX="373.0" layoutY="187.0" prefHeight="31.0" prefWidth="249.0" />
+      <Label layoutX="113.0" layoutY="170.0" prefHeight="66.0" prefWidth="249.0" text=" Receiver's name : ">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="alertImage" layoutX="947.0" layoutY="291.0" prefHeight="51.0" prefWidth="58.0" textFill="RED">
+         <font>
+            <Font size="57.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="351.0" prefHeight="66.0" prefWidth="305.0" text="Item infomation : ">
+         <font>
+            <Font name="Calibri Italic" size="34.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

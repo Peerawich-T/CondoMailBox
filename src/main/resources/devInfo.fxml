@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="condoProject.controller.InfoController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@pbb.png" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="0.88" surfaceScale="10.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="150.37" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="191.0" fitWidth="178.0" layoutX="51.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@20201028_113807(0).jpg" />
+         </image>
+         <effect>
+            <Lighting diffuseConstant="1.83" specularConstant="1.06" specularExponent="31.22" surfaceScale="10.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="128.41" />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <Label layoutX="246.0" layoutY="171.0" prefHeight="75.0" prefWidth="548.0" text="ชื่อ-นามสกุล : พีรวิชญ์ ตัณฑเวชกิจ" textAlignment="CENTER" textFill="#02ff70">
+         <font>
+            <Font name="Calibri" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="350.0" prefHeight="75.0" prefWidth="385.0" text="รหัสนิสิต : 6210400167" textFill="#02ff70">
+         <font>
+            <Font name="Calibri" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="190.0" layoutY="450.0" prefHeight="75.0" prefWidth="604.0" text="คำแนะนำ : ศึกษาวิธีใช้จากคู่มือการใช้งาน" textAlignment="CENTER" textFill="#02ff70">
+         <font>
+            <Font name="Calibri" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="302.0" layoutY="67.0" prefHeight="75.0" prefWidth="196.0" text="ข้อมูลผู้จัดทำ" textAlignment="CENTER" textFill="#02ff70">
+         <font>
+            <Font name="Calibri" size="38.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="returnImageView" fitHeight="150.0" fitWidth="200.0" layoutX="631.0" layoutY="21.0" onMouseClicked="#handleReturnImageViewOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@return.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="246.0" layoutY="258.0" prefHeight="75.0" prefWidth="548.0" text="ชื่อเล่น : เชส" textAlignment="CENTER" textFill="#02ff70">
+         <font>
+            <Font name="Calibri" size="38.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

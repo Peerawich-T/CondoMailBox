@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #B5EACC;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="condoProject.controller.AddNewStaffController">
+   <children>
+      <ImageView fitHeight="768.0" fitWidth="1024.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@dp.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="308.0" layoutY="74.0" prefHeight="71.0" prefWidth="448.0" text="Add a new staff" textFill="#0425ff">
+         <font>
+            <Font name="Calibri" size="60.0" />
+         </font>
+      </Label>
+      <Label layoutX="190.0" layoutY="198.0" text="Set username" textFill="#0affe0">
+         <font>
+            <Font name="Calibri" size="34.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userName" layoutX="190.0" layoutY="265.0" prefHeight="43.0" prefWidth="280.0" />
+      <Label layoutX="190.0" layoutY="341.0" text="Set password" textFill="#0de3ff">
+         <font>
+            <Font name="Calibri" size="34.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="password" layoutX="190.0" layoutY="425.0" prefHeight="43.0" prefWidth="276.0" />
+      <Label layoutX="190.0" layoutY="509.0" text="Confirm password" textFill="#0affe0">
+         <font>
+            <Font name="Calibri" size="34.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="confirmPassword" layoutX="190.0" layoutY="583.0" prefHeight="43.0" prefWidth="276.0" />
+      <Label layoutX="691.0" layoutY="202.0" prefHeight="43.0" prefWidth="84.0" text="Name" textFill="#073dff">
+         <font>
+            <Font name="Calibri Italic" size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="691.0" layoutY="265.0" prefHeight="43.0" prefWidth="301.0" />
+      <ImageView fx:id="backToAdminMenu" fitHeight="150.0" fitWidth="200.0" layoutX="833.0" layoutY="614.0" onMouseClicked="#handleBackToAdminImageViewOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@return.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="addBtn" layoutX="800.0" layoutY="388.0" mnemonicParsing="false" onAction="#handleAddBtnOnAction" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: #1310dd;" text="Add" textFill="#00ff59">
+         <font>
+            <Font name="Calibri" size="34.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="2.0" specularConstant="1.1" specularExponent="22.44" surfaceScale="10.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="confirmPasswordStatus" layoutX="470.0" layoutY="496.0" prefHeight="63.0" prefWidth="472.0" textFill="#e31010">
+         <font>
+            <Font size="32.0" />
+         </font></Label>
+      <Label fx:id="passwordStatus" layoutX="416.0" layoutY="341.0" prefHeight="43.0" prefWidth="257.0" textFill="#e31010">
+         <font>
+            <Font size="32.0" />
+         </font></Label>
+      <Label fx:id="userNameStatus" layoutX="394.0" layoutY="208.0" prefHeight="46.0" prefWidth="301.0" textFill="#e31010">
+         <font>
+            <Font size="31.0" />
+         </font></Label>
+      <Label fx:id="nameStatus" layoutX="775.0" layoutY="200.0" prefHeight="43.0" prefWidth="257.0" textFill="#e31010">
+         <font>
+            <Font size="32.0" />
+         </font></Label>
+   </children>
+</Pane>
